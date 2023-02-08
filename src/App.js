@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import MyForm from './components/MyForm';
+import AnalogClock from './components/AnalogClock';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           <MyForm />
+          <AnalogClock/>
         </p>
         <a
           className="App-link"
