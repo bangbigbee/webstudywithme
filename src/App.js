@@ -6,15 +6,10 @@ import CountDownTimer from './components/CountDownTimer';
 function App() {
   return (
     <div className="App">
-
-
       <p>
-        {/* <MyForm /> */}
-        <AnalogClock />
-        <CountDownTimer />
+        <MyForm />
       </p>
-
-
+      <AnalogClock />
     </div>
   );
 }
