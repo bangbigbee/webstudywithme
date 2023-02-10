@@ -20,7 +20,7 @@ class AnalogClock extends React.Component {
     render() {
         return (
             <>
-                <div className="clock"> Analog Clock
+                <div className="clock">
                     <div className="hour_hand"
                         style={{ transform: `rotateZ(${this.state.time.getHours() * 30}deg)` }}>
                     </div>

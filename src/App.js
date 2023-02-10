@@ -1,6 +1,7 @@
 import './App.css';
 import MyForm from './components/MyForm';
 import AnalogClock from './components/AnalogClock';
+import CountDownTimer from './components/CountDownTimer';
 
 function App() {
   return (
@@ -8,8 +9,9 @@ function App() {
 
 
       <p>
-        <MyForm />
+        {/* <MyForm /> */}
         <AnalogClock />
+        <CountDownTimer />
       </p>
 
 
