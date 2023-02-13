@@ -1,15 +1,14 @@
 import './App.css';
-import MyForm from './components/MyForm';
 import AnalogClock from './components/AnalogClock';
 import CountDownTimer from './components/CountDownTimer';
+import FormComponent from './components/FormComponent';
 
 function App() {
   return (
     <div className="App">
-      <p>
-        <MyForm />
-      </p>
       <AnalogClock />
+      <FormComponent/>
+      <CountDownTimer/>
     </div>
   );
 }

@@ -16,7 +16,7 @@ class AnalogClock extends React.Component {
     }
     componentWillUnmount() {
         clearInterval(this.timeId)
-    }
+      }
     render() {
         return (
             <>

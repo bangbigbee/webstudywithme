@@ -1,19 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from 'react'
 
-const CountDownTimer = () => {
-    const now = new Date().getTime();
-    let timeToCount = 0;
-    const distance = timeToCount - now;
-    const handleStartTimer = (event) => {
-        alert('Clicked!');
-    }
-    return (
-        <>
-            <div>{now}</div>
-            <input type="submit"
-                value="Start"
-                onClick={(event) => handleStartTimer(event)} />
-        </>
-    )
-};
-export default CountDownTimer;
+class CountDownTimer extends React.Component {
+constructor(props) {
+	super(props);
+	this.state = {
+		time: new Date()
+	};
+}
+componentDidMount() {
+	this.timeId = setInterval(() => {
+		this.setState({
+			time: new Date()
+		})
+	}, 1000);
+}
+componentWillUnmount() {
+	clearInterval(this.timeId)
+  }
+
+render(){
+	// {console.log(this.state.time.getHours())}
+	return(
+<div className="countdown">
+{this.state.time.getHours()} : {this.state.time.getMinutes()} : {this.state.time.getSeconds()}
+</div>
+	)
+}
+}
+export default CountDownTimer

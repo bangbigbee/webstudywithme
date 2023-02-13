@@ -1,14 +1,9 @@
 import React from "react";
-import MyFormChild from "./MyFormChild";
-class MyForm extends React.Component {
+
+class FormComponent extends React.Component {
     state = {
         firstName: '',
         lastName: '',
-        arrJobs: [
-            { id: 'job1', title: 'dev', salary: '500 $' },
-            { id: 'job2', title: 'tester', salary: '300 $' },
-            { id: 'job3', title: 'project manager', salary: '1000 $' }
-        ]
     }
     handleOnChangeFirstName = (event) => {
         this.setState({
@@ -22,11 +17,10 @@ class MyForm extends React.Component {
     }
     handleSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state)
+        alert('Submitted!')
     }
     render() {
-        console.log(this.state.firstName)
-        return (
+        return(
             <form>
                 <label htmlFor="firstName">First Name: </label>
                 <input
@@ -40,13 +34,8 @@ class MyForm extends React.Component {
                     value={this.state.lastName}
                     onChange={(event) => this.handleOnChangeLastName(event)} /> <br />
                 <input type="submit" value="Submit" onClick={(event) => this.handleSubmit(event)} />
-                <MyFormChild
-                    name={this.state.firstName}
-                    age={'25'}
-                    address={'Da Nang'}
-                    arrJobs={this.state.arrJobs} />
             </form>
         )
     }
 }
-export default MyForm
+export default FormComponent
