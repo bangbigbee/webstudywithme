@@ -2,6 +2,16 @@
   text-align: center;
 }
 
+.digital-clock {
+  display: flex;
+  position: fixed;
+  left: 50%;
+  bottom: 50px;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
 .clock {
   width: 300px;
   height: 300px;
